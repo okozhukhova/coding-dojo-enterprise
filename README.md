@@ -1,16 +1,16 @@
 # coding-dojo-enterprise
-Used in Coding Dojos for RPlan Enterprise. Mainly for training of new 
+Used for Coding Dojos in RPlan Enterprise. The Katas sorted by corresponding Kata type (see ./kata/kata.md). Below there are base projects for the different programming-languages.
 
 ## Structure
 ```
 README.md
-|-- _katas_
-|   _README.md_
+|-- _kata_
+|   |-- kata.md
 |   |-- _<kata-type>-kata_
 |   |   |-- _<kata-name>_
-|   |   |   |-- README.md
+|   |   |   |-- <kata-name>.md
 |   |   |   |-- _<programming-language>_
-|   |   |   |   <baseSourcecode>
+|   |   |   |   |-- <baseSourcecode>
 ```
 ## Sources
 Structure of coding dojos mainly from [CleanCode Developerschool](http://ccd-school.de/coding-dojo/)
