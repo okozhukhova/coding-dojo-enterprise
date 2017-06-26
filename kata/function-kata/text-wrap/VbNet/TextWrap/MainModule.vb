@@ -2,16 +2,28 @@
 Module MainModule
 
     Public Sub Main()
-        If Not (Environment.GetCommandLineArgs().Length = 3) Then
-            Console.WriteLine("USAGE: text-wrap 'text that should be wrapped' <maxTextLength>")
-        End If
-        Dim text As String = Environment.GetCommandLineArgs(1)
-        Dim maxTextLength As Integer = CInt(Environment.GetCommandLineArgs()(2))
+        Dim args As String() = Environment.GetCommandLineArgs()
+        For Each Arg In args
+            Console.WriteLine(Arg)
+        Next
+        Dim text As String
 
-        Dim textWrap As New TextWrapProject.TextWrap()
-        Console.WriteLine(textWrap.WrapText(text, maxTextLength))
-        'textWrap.wrapText()
+        Dim maxTextLength As Integer
+
+        If UBound(args) + 1 <> 3 Then
+            Console.WriteLine("Anzahl der Argumente stimmt nicht.")
+            text = Console.ReadLine()
+            Console.WriteLine()
+            maxTextLength = Console.ReadLine()
+        Else
+            text = args(1)
+            maxTextLength = args(2)
+        End If
+
+        Dim test As New TextWrapProject.TextWrap()
+        Console.WriteLine(test.wrapText(text, maxTextLength))
         Console.ReadKey() ' wait till next key so the user can see the tree
+
 
     End Sub
 End Module
