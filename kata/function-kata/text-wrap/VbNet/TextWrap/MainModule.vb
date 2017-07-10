@@ -21,6 +21,8 @@ Module MainModule
         End If
 
         Dim test As New TextWrapProject.TextWrap()
+        Console.WriteLine()
+        Console.WriteLine("Umgebrochener Text:")
         Console.WriteLine(test.wrapText(text, maxTextLength))
         Console.ReadKey() ' wait till next key so the user can see the tree
 
